@@ -12,7 +12,7 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
 
-  return 
+  return (
     <div
       style= {{
         maxWidth: "800px",
@@ -30,6 +30,6 @@ function App() {
         <Keyboard />
 
     </div>
+    )
 }
-
 export default App
