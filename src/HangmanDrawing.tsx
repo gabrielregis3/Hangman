@@ -1,3 +1,7 @@
+type HangmanDrawningProps = {
+    numberOfGuesses: number
+}
+
 const HEAD = (
     <div style={{
         width: "50px",
@@ -73,14 +77,11 @@ const LEFT_LEG = (
     }}></div>
 )
 
-export function HangmanDrawing() {
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
+
+export function HangmanDrawing({ numberOfGuesses }: HangmanDrawningProps) {
     return <div style={{ position: "relative" }}>
-        {HEAD}
-        {BODY}
-        {RIGHT_ARM}
-        {LEFT_ARM}
-        {RIGHT_LEG}
-        {LEFT_LEG}
+        {BODY_PARTS.slice(0, numberOfGuesses)}
         <div style ={{ height: "50px", width: "10px", background: "black", top: 0, right: 0, position: "absolute"}}></div>
         <div style={{ height: "10px", width: "200px", background: "black", marginLeft: "120px"}}></div>
         <div style={{ height: "400px", width: "10px", background: "black", marginLeft: "120px"}}></div>
