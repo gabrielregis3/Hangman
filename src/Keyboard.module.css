@@ -13,7 +13,7 @@
 
 .btn.active {
     background-color: hs1(200, 100%, 50%);
-    color: white;
+    color: green;
 }
 
 .btn.inactive {
